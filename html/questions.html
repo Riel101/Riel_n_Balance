@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <title>iSmart - Questions</title>
+</head>
+<body class="bg-black text-amber-500">
+    
+    <div id="questions-container" class="px-8 md:w-[70%] lg:w-[50%] w-[100%] mx-auto">
+
+           <!-- Countdown -->
+        <div class="flex flex-col items-center justify-center">
+            <div id="timer" class="animate-pulse w-16 h-12 flex text-2xl font-light items-center justify-center bg-amber-500 bg-opacity-20 px-10 my-8 border-2 border-amber-500 rounded-full"><span id="mins">02</span>:<span id="secs">00</span></div>
+        </div>
+
+        <!-- Question -->
+        <p class="text-xl text-center font-semibold mb-4" id="theQuestion"></p>
+
+        <!-- Options -->
+        <div id="opt-container" class="flex flex-col items-center gap-2">
+            <button class="w-[100%] lg:w-[80%] text-left px-5 py-3 border border-amber-500 rounded-lg hover:bg-amber-500 opt hover:bg-opacity-30 hover:scale-105  transition duration-500"></button><br>
+            <button class="w-[100%] lg:w-[80%] text-left px-5 py-3 border border-amber-500 rounded-lg hover:bg-amber-500 opt hover:bg-opacity-30 hover:scale-105  transition duration-500"></button><br>
+            <button class="w-[100%] lg:w-[80%] text-left px-5 py-3 border border-amber-500 rounded-lg hover:bg-amber-500 opt hover:bg-opacity-30 hover:scale-105  transition duration-500"></button><br>
+            <button class="w-[100%] lg:w-[80%] text-left px-5 py-3 border border-amber-500 rounded-lg hover:bg-amber-500 opt hover:bg-opacity-30 hover:scale-105  transition duration-500"></button>
+            <button class ="next-btn mt-6 px-8 py-2 text-black hover:text-amber-500 bg-amber-500 border border-amber-500 rounded-lg hover:bg-opacity-30 mb-8 transition duration-500">Next</button>
+        </div>
+    </div>
+
+    <!-- Result Modal Box -->
+    <div id="modal-box" class="hidden h-[60vh] px-8 py-20 sm:w-[80%] md:w-[70%] lg:w-[50%] w-[100%] mx-auto border border-amber-500 my-[20%] md:my-[10%] text-center">
+        <h2 class="font-bold text-4xl my-3">Here's what you got!</h2>
+        <p class="text-2xl font-light">You scored <span id="total-scored" class="font-semibold text-2xl">10</span> out of 10</p>
+
+        <button id="modal-close-btn" class="px-6 py-4 font-bold border-2 border-amber-500 rounded-lg hover:bg-amber-500 hover:bg-opacity-30 my-16 transition duration-500 text-lg">Play Again</button>
+    </div>
+
+    <script src="../js/question.js"></script>
+</body>
+</html>
